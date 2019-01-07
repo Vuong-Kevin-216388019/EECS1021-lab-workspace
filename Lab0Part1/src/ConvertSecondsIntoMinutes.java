@@ -11,12 +11,12 @@ public class ConvertSecondsIntoMinutes {
 		
 		
 		System.out.println("Enter an integer for seconds");
-		double seconds = input.nextDouble();
+		int seconds = input.nextInt();
 		input.nextLine();
 		
 		
-		double minutes = 
-		double secondss = 
+		double minutes = seconds / 60;
+		double secondss = seconds % 60;
 		
 		
 		System.out.println(name + ", your input is " + seconds + " seconds can be divided into " + minutes + " minutes and " + secondss + " seconds");

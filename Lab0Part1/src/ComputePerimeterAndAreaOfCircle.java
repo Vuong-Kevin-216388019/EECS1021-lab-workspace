@@ -7,10 +7,10 @@ public class ComputePerimeterAndAreaOfCircle {
 		Scanner input = new Scanner(System.in);
 		
 		System.out.println("Enter an integer for radius");
-		double radius = input.nextDouble();
+		int radius = input.nextInt();
 		input.nextLine();
 		
-		System.out.println("What's your name");
+		System.out.println("What's your name?");
 		String name = input.nextLine();
 		
 		
