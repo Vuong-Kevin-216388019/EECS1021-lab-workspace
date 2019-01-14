@@ -52,7 +52,7 @@ public class Combinations {
 		System.out.println("(" + four + ", " + number4 + ")");
 		
 		
-		
+		input.close();
 		
 		
 	}
