@@ -1,4 +1,7 @@
 /BooleanDataType.class
+/Combinations.class
+/ComputeAndInterpretBMI.class
+/GradeReport.class
 /IfStatementApp1.class
 /IfStatementApp2.class
 /IfStatementApp3.class
@@ -12,7 +15,4 @@
 /LogicalOperationApp3b.class
 /RelationalOperations1.class
 /RelationalOperations2.class
-/Combinations.class
 /SumOfCrossProduct.class
-/GradeReport.class
-/ComputeAndInterpretBMI.class

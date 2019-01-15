@@ -4,7 +4,7 @@ public class Combinations {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
-		
+//		prompts user for all strings and integers
 		System.out.println("Enter the 1st string:");
 		String one = input.nextLine();
 				
@@ -29,7 +29,7 @@ public class Combinations {
 		System.out.println("Enter the 4th integer:");
 		int number4 = input.nextInt();
 		
-		
+//      displays all combinations 
 		System.out.println("Here are all 16 possible combinations:");
 		System.out.println("(" + one + ", " + number1 + ")");
 		System.out.println("(" + one + ", " + number2 + ")");
