@@ -16,7 +16,7 @@ public class GradeReport {
 		int quiz2 = input.nextInt();
 
 		System.out.println(name + ", what is your score for quiz 3 (out of 100)?");
-		int quiz3 = input.nextInt();
+		int quiz3 = input.nextInt();		
 		
 		System.out.println(name + ", what is your score for quiz 4 (out of 100)?");
 		int quiz4 = input.nextInt();
