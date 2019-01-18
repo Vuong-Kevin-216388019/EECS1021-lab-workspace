@@ -48,10 +48,10 @@ public class RockPaperScissorsGame {
 		int tieResult1 = 0;
 		int player2Result1 = 0;
 		
-		if(play1 == "R" && play2 == "P" || play1 == "S" && play2 == "P" || play1 == "P" && play2 == "R") {
+		if(play1.equals("R") && play2.equals("P") || play1.equals("S") && play2.equals("P") || play1.equals("P")  && play2.equals("R")) {
 			 player1Result1 = 1;
 		}
-		else if(play1 == play2) {
+		else if(play1.equals(play2)) {
 			 tieResult1 = 1;
 		}	
 		else {
