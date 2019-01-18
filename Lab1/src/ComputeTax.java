@@ -16,7 +16,7 @@ public class ComputeTax {
 			System.out.println(name + ", enter your taxable income");
 			income = input.nextDouble();
 		}	
-			if(status = 1 && (income > 0 || income < 8350)) {
+	//		if(status = 1 && (income > 0 || income < 8350)) {
 				System.out.println();
 		}
 		
@@ -25,17 +25,13 @@ public class ComputeTax {
 			
 			
 			
-		else{
-				System.out.println("Illegal status:" + status);
-		}
+		//else{
+				//System.out.println("Illegal status:" + status);
+		//}
 		
 		
 		
-		System.out.println("Illegal status:" + status);
-		
-		
-		
-		
+	//	System.out.println("Illegal status:" + status);
 		
 		
 		
@@ -49,7 +45,11 @@ public class ComputeTax {
 		
 		
 		
-		input.close();
+		
+		
+		
+		
+		//input.close();
 	}
 
-}
+//}
