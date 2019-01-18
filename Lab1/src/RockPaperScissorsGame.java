@@ -48,7 +48,7 @@ public class RockPaperScissorsGame {
 		int tieResult1 = 0;
 		int player2Result1 = 0;
 		
-		if(play1.equals("R") && play2.equals("P") || play1.equals("S") && play2.equals("P") || play1.equals("P")  && play2.equals("R")) {
+		if((play1.equals("P") && play2.equals("R")) || (play1.equals("S") && play2.equals("P")) || (play1.equals("R")  && play2.equals("S"))) {
 			 player1Result1 = 1;
 		}
 		else if(play1.equals(play2)) {
@@ -64,10 +64,10 @@ public class RockPaperScissorsGame {
 		int tieResult2 = 0;
 		int player2Result2 = 0;
 		
-		if(play11 == "R" && play22 == "P" || play11 == "S" && play22 == "P" || play11 == "P" && play22 == "R") {
+		if(play11.equals("P") && play22.equals("R") || play11.equals("S") && play22.equals("P") || play11.equals("R") && play22.equals("S")) {
 			 player1Result2 = 1;
 		}
-		else if(play11 == play22) {
+		else if(play11.equals(play22)) {
 			 tieResult2 = 1;
 		}	
 		else {
@@ -80,18 +80,19 @@ public class RockPaperScissorsGame {
 		int tieResult3 = 0;
 		int player2Result3 = 0;
 		
-		if(play111 == "R" && play222 == "P" || play111 == "S" && play222 == "P" || play111 == "P" && play222 == "R") {
+		if(play111.equals("P") && play222.equals("R") || play111.equals("S") && play222.equals("P") || play111.equals("R") && play222.equals("S")) {
 			 player1Result3 = 1;
 		}
-		else if(play111 == play222) {
+		else if(play111.equals(play222)) {
 			 tieResult3 = 1;
 		}	
 		else {
 			 player2Result3 = 1;
 		}
 
-//		comapres the final results, if player1Results
+//		compares the final results, if player1Results
 		int finalResult1 = player1Result1 + player1Result2 + player1Result3;
+//		System.out.println(finalResult1 + " " + (player1Result1) + " " + (player1Result2) + " " + (player1Result3));
 		int finalResult2 = player2Result1 + player2Result2 + player2Result3;
 		int finalTieResult = tieResult1 + tieResult2 + tieResult3;
 		
