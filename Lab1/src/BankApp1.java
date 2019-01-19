@@ -29,12 +29,34 @@ public class BankApp1 {
 			System.out.println("Error: transaction type " + type + " is neither d nor w");
 		}
 		
+		System.out.println("Enter an amount for " + type + ": ");
+		double amount = input.nextDouble();
+		input.nextLine();
 		
+		if(type.equals("d")) {
+			if(amount < 0) {
+				System.out.println("Error: deposit amount is not positive.");
+			}
+			else if(balance + amount <= 1000) {
+				System.out.println("Error: deposit amount is too large.");
+			}
+			else {
+				balance = balance + amount;
+			}
+		}
+		else if(type.equals("w")) {
+			if(amount < 0) {
+				System.out.println("Error: withdraw amount is not positive.");
+			}
+			else if(amount >= balance) {
+				System.out.println("Error: withdraw amount is too large.");
+			}
+			else {
+				balance -= amount;
+			}
+		}
 		
-		
-		
-		
-		
+		System.out.println("Resulting balance after performing transaction of " + type + " with $" + amount + ": " + balance);
 		
 		input.close();
 	}
