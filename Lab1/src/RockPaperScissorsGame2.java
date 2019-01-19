@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class RockPaperScissorsGame {
+public class RockPaperScissorsGame2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -21,18 +21,18 @@ public class RockPaperScissorsGame {
 		System.out.println("What does " + p2 + " play? (R, P 0r S)");
 		String play2 = input.nextLine();
 		
-		int player1Result1 = 0;
-		int tieResult1 = 0;
-		int player2Result1 = 0;
+		int player1Result = 0;
+		int tieResult = 0;
+		int player2Result = 0;
 		
 		if((play1.equals("P") && play2.equals("R")) || (play1.equals("S") && play2.equals("P")) || (play1.equals("R")  && play2.equals("S"))) {
-			 player1Result1 = 1;
+			 player1Result = 1;
 		}
 		else if(play1.equals(play2)) {
-			 tieResult1 = 1;
+			 tieResult = 1;
 		}	
 		else {
-			 player2Result1 = 1;
+			 player2Result = 1;
 		}
 		
 		System.out.println("============");
@@ -45,18 +45,15 @@ public class RockPaperScissorsGame {
 		System.out.println("What does " + p2 + " play? (R, P 0r S)");
 		String play22 = input.nextLine();
 		
-		int player1Result2 = 0;
-		int tieResult2 = 0;
-		int player2Result2 = 0;
 		
 		if(play11.equals("P") && play22.equals("R") || play11.equals("S") && play22.equals("P") || play11.equals("R") && play22.equals("S")) {
-			 player1Result2 = 1;
+			 player1Result = player1Result + 1;
 		}
 		else if(play11.equals(play22)) {
-			 tieResult2 = 1;
+			 tieResult = tieResult + 1;
 		}	
 		else {
-			 player2Result2 = 1;
+			 player2Result = player2Result + 1;
 		}
 		
 		System.out.println("============");
@@ -69,49 +66,36 @@ public class RockPaperScissorsGame {
 		System.out.println("What does " + p2 + " play? (R, P 0r S)");
 		String play222 = input.nextLine();
 		
-		if(player1Result2 > player2Result2 || player1Result2 < player2Result2) {
-			
+		if(player1Result == 2) {
+			System.out.println("Game over: " + p1 + " wins!");
 		}
-			if(player1Result2 > player2Result2) {
-				System.out.println("Game over: " + p1 + " wins!");
+			else if(player2Result == 2) {
+				System.out.println("Game over: " + p2 + " wins!");	
 			}	
-			else{
-				System.out.println("Game over: " + p2 + " wins!");
-			}
-		
-		int player1Result3 = 0;
-		int tieResult3 = 0;
-		int player2Result3 = 0;
-		
-		if(play111.equals("P") && play222.equals("R") || play111.equals("S") && play222.equals("P") || play111.equals("R") && play222.equals("S")) {
-			 player1Result3 = 1;
+		else if(play111.equals("P") && play222.equals("R") || play111.equals("S") && play222.equals("P") || play111.equals("R") && play222.equals("S")) {
+			 player1Result = player1Result + 1;
 		}
 		else if(play111.equals(play222)) {
-			 tieResult3 = 1;
+			 tieResult = tieResult + 1;
 		}	
 		else {
-			 player2Result3 = 1;
+			 player2Result = player2Result + 1;
 		}
-		
+			
 //------------------------------------------------------------------------------------------------------------------------------	
 		
 
 //------------------------------------------------------------------------------------------------------------------------------		
 		
 
-//		compares the final results, if player1Results
-		int finalResult1 = player1Result1 + player1Result2 + player1Result3;
-//		System.out.println(finalResult1 + " " + (player1Result1) + " " + (player1Result2) + " " + (player1Result3));
-		int finalResult2 = player2Result1 + player2Result2 + player2Result3;
-		int finalTieResult = tieResult1 + tieResult2 + tieResult3;
-		
-		if(finalResult1 > finalResult2) {
+
+		if(player1Result > player2Result) {
 			System.out.println("Game over: " + p1 + " wins!");
 		}
-		else if(finalTieResult == 3) {
+		else if(tieResult == 3) {
 			System.out.println("Game over: a tie between " + p1 + " and  " + p2);
 		}
-		else if(finalResult1 < finalResult2) {
+		else if(player1Result < player2Result) {
 			System.out.println("Game over: " + p2 + " wins!");
 		}
 		else {
