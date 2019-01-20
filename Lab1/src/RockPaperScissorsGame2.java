@@ -64,9 +64,7 @@ public class RockPaperScissorsGame2 {
 		else if(player2Result == 2) {
 			System.out.println("Game over: " + p2 + " wins!");
 		}
-		else if(tieResult == 2) {
-			System.out.println("Game over: a tie between " + p1 + " and  " + p2);
-		}
+		
 		else{
 			
 			System.out.println("============");
@@ -80,76 +78,33 @@ public class RockPaperScissorsGame2 {
 			String play222 = input.nextLine();
 			
 			if(play111.equals("P") && play222.equals("R") || play111.equals("S") && play222.equals("P") || play111.equals("R") && play222.equals("S")) {
-				System.out.println("Game over: " + p1 + " wins!");
+				player1Result += 1;
+				if(player1Result == 1 && tieResult == 1) {
+					System.out.println("Game over: a tie between " + p1 + " and  " + p2);
+				}
+				else
+					System.out.println("Game over: " + p1 + " wins!");
 			}
 				
 			else if(play111.equals(play222)) {
 				System.out.println("Game over: a tie between " + p1 + " and  " + p2);
 			}	
+			//else if((player1Result == 1 || player2Result == 1) && tieResult ==1) {
+				
+			//}
 			else {
-				System.out.println("Game over: " + p2 + " wins!");
+				player2Result += 1;
+				if(player2Result == 1 && tieResult == 1) {
+					System.out.println("Game over: a tie between " + p1 + " and  " + p2);
+				}
+				else
+					System.out.println("Game over: " + p2 + " wins!");
 			}
 		}
 		
 		
 		
 		input.close();
-		
-		
-		
-/*		if(player1Result == 2) {
-			System.out.println("Game over: " + p1 + " wins!");
-		}
-			else if(player2Result == 2) {
-				System.out.println("Game over: " + p2 + " wins!");	
-			}	
-			else if(play111.equals("P") && play222.equals("R") || play111.equals("S") && play222.equals("P") || play111.equals("R") && play222.equals("S")) {
-				player1Result = player1Result + 1;
-		}
-		else if(play111.equals(play222)) {
-			 tieResult = tieResult + 1;
-		}	
-		else {
-			 player2Result = player2Result + 1;
-		}
-*/			
-//------------------------------------------------------------------------------------------------------------------------------	
-	
-
-//------------------------------------------------------------------------------------------------------------------------------		
-		
-
-
-/*		if(player1Result > player2Result) {
-			System.out.println("Game over: " + p1 + " wins!");
-		}
-		else if(tieResult == 3) {
-			System.out.println("Game over: a tie between " + p1 + " and  " + p2);
-		}
-		else if(player1Result < player2Result) {
-			System.out.println("Game over: " + p2 + " wins!");
-		}
-		else {
-			System.out.println("Game over: a tie between " + p1 + " and  " + p2);
-		}
-	*/	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		
