@@ -58,7 +58,7 @@ public class ComputeTax {
 					System.out.println("Part I: $" + marriedTax1);
 				}
 				else if(marriedIncome > 16700 && marriedIncome <= 67900) {
-					double marriedTax2 = (marriedIncome - 1670) * 0.15;
+					double marriedTax2 = (marriedIncome - 16700) * 0.15;
 					marriedFinalTax = marriedTax2 + marriedTax1;
 					System.out.println(name + ", you shoudl pay $" + marriedFinalTax);
 					System.out.println("Calculation is based on the scheme of Married Filing:");

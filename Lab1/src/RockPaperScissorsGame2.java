@@ -87,11 +87,17 @@ public class RockPaperScissorsGame2 {
 			}
 				
 			else if(play111.equals(play222)) {
+				tieResult += 1;
+				if(tieResult == 2 && player1Result == 1) {
+					System.out.println("Game over: " + p1 + " wins!");
+				}
+				else if(tieResult == 2 && player2Result == 1) {
+					System.out.println("Game over: " + p2 + " wins!");
+				}
+				else 
 				System.out.println("Game over: a tie between " + p1 + " and  " + p2);
-			}	
-			//else if((player1Result == 1 || player2Result == 1) && tieResult ==1) {
-				
-			//}
+			}
+			
 			else {
 				player2Result += 1;
 				if(player2Result == 1 && tieResult == 1) {
