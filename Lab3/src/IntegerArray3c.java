@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class IntegerArray3c {
 
@@ -13,6 +14,9 @@ public class IntegerArray3c {
 		for(int i = 0; i < ia.length; i ++) {
 			System.out.println("Elements of ia at index " + i + "is: " + ia[i]);
 		}
+		
+		
+		System.out.println(Arrays.toString(ia));
 	}
 
 }
