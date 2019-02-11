@@ -1,7 +1,7 @@
-
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class MathSequence {
+public class MathSequenceBackup {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -102,6 +102,7 @@ public class MathSequence {
 					System.out.println("Enter a new number.");
 					determineArray[counter] = input.nextInt();
 					counter = counter + 1;
+					System.out.println(counter);
 					if(counter == 10) {
 						System.out.println("You have entered 10 numbers we will now compute sequence.");
 					}
@@ -113,6 +114,28 @@ public class MathSequence {
 					}
 					
 				}	
+				/*if(counter == 9) {
+					System.out.println("Enter a new number.");
+					determineArray[9] = input.nextInt();
+					System.out.println("You have entered 10 numbers we will now compute sequence.");
+					System.out.println(Arrays.toString(determineArray));
+					int comCounter = 0;
+					int comDiff = determineArray[1] - determineArray[0];
+					for(int i = 0; i < 9; i ++) {
+						sum = sum + determineArray[i];
+						if(determineArray[i + 1] - determineArray[i] == comDiff) {
+							comCounter ++;
+						}
+					}
+					sum = sum + determineArray[9];
+					if(comCounter == 9) {
+						System.out.println("first term " + determineArray[0] + ", common difference " + comDiff + ", length " + determineArray.length + ", and sum " + sum);
+					}
+					else {
+						System.out.println("This is not an arithmetic sequence.");
+					}
+					
+				}*/
 				if(counter == 1 && choice2.equals("N")) {
 					System.out.println("Error: we cannot infer the common difference from a sequence of size one.");
 				}
@@ -127,20 +150,10 @@ public class MathSequence {
 					}
 					sum = sum + determineArray[counter - 1];
 					if(comCounter == counter - 1) {
-						System.out.print("<");
-						for(int i = 0; i < counter - 1; i ++) {
-						System.out.print(" " + determineArray[i] + ", ");
-						}
-						System.out.println(determineArray[counter - 1] + " > is an arithmetic sequence with");
 						System.out.println("first term " + determineArray[0] + ", common difference " + comDiff + ", length " + counter + ", and sum " + sum);
 					}
 					else {
-						System.out.print("<");
-						for(int i = 0; i < counter - 1; i ++) {
-						System.out.print(" " + determineArray[i] + ", ");
-						}
-						System.out.print(determineArray[counter - 1] + " >");
-						System.out.println(" is not an arithmetic sequence.");
+						System.out.println("This is not an arithmetic sequence.");
 					}
 				}
 				System.out.println("Would you like to process another sequence? (Y/N)");
@@ -156,13 +169,8 @@ public class MathSequence {
 		
 		
 		else {
-			
 			System.out.println("Error: task number must be 1, 2 or 3.");
-			System.out.println("What kind of processing task would you like to perform?");
-			System.out.println("1: Generate an arithmetic sequence.");
-			System.out.println("2: Generate a geometric sequence.");
-			System.out.println("3: Determine an arithmetic sequence.");
-			perform = input.nextInt();
+		
 		}
 		}
 		System.out.println("Bye!");
