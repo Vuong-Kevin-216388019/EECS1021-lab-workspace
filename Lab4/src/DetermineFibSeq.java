@@ -46,7 +46,12 @@ public class DetermineFibSeq {
 							
 						}
 						else {
-							System.out.println("This is not a fib sequence");
+							System.out.print("The sequence you entered < ");
+							for(int j = 0; j < counter - 1; j ++) {
+								System.out.print(fibArray[j] + ", ");
+							}
+							System.out.println(">");
+							System.out.println("is not the first " + (counter - 1) + " numbers of the fibonnaci sequence");
 						}
 					}
 					System.out.println("Do you want to enter another sequence? (Y/N)");
