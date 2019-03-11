@@ -43,6 +43,14 @@ public class DetermineFibSeq {
 								System.out.println(">");
 								System.out.println("is the first " + (counter - 1) + " numbers of the fibonnaci sequence");
 							}
+							else {
+								System.out.print("The sequence you entered < ");
+								for(int j = 0; j < counter - 1; j ++) {
+									System.out.print(fibArray[j] + ", ");
+								}
+								System.out.println(">");
+								System.out.println("is not the first " + (counter - 1) + " numbers of the fibonnaci sequence");
+							}
 							
 						}
 						else {
@@ -54,6 +62,7 @@ public class DetermineFibSeq {
 							System.out.println("is not the first " + (counter - 1) + " numbers of the fibonnaci sequence");
 						}
 					}
+					// asks for another sequence, depending on decision "choice" variable will change
 					System.out.println("Do you want to enter another sequence? (Y/N)");
 					choice = input.next();
 					break;
