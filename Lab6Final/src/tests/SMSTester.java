@@ -186,9 +186,10 @@ public class SMSTester {
 		 * Change the marks, given the student's name
 		 * the title of course they are taking, and the new marks.
 		 */
-		sms.setMarks("Heeyeon", "3311", 74);
-		sms.setMarks("Heeyeon", "4302", 84);
-		sms.setMarks("Heeyeon", "4080", 95);
+		sms.setMarks("Heeyeon", "3311", 55);
+		sms.setMarks("Heeyeon", "4302", 91);
+		sms.setMarks("Heeyeon", "4080", 71);
+		sms.setMarks("Heeyeon", "2030", 77);
 		System.out.println(sms.getMarks("Heeyeon", "3311"));
 		System.out.println(sms.getMarks("Heeyeon", "4302"));
 		System.out.println(sms.getMarks("Heeyeon", "4080"));

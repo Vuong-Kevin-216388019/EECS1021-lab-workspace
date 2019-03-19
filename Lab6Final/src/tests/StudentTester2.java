@@ -24,15 +24,15 @@ public class StudentTester2 {
 		cr2.setInstructor(f2);
 		cr3.setInstructor(f1);
 		
-		// Link from student objects to course record objects
+		
 		s1.addCourse(cr1);
 		s1.addCourse(cr2);
 		s2.addCourse(cr2);
 		s2.addCourse(cr3);
 		
-		System.out.println(s1.courses[0] == s2.courses[1]); // false
-		System.out.println(s1.courses[1] == s2.courses[0]); // true
-		System.out.println(s1.courses[2] == s2.courses[2]); // true
-		System.out.println(s1.courses[0].instructor == s2.courses[0].instructor); // true
+		System.out.println(s1.courses[0] == s2.courses[1]); 
+		System.out.println(s1.courses[1] == s2.courses[0]); 
+		System.out.println(s1.courses[2] == s2.courses[2]); 
+		System.out.println(s1.courses[0].instructor == s2.courses[0].instructor); 
 	}
 }

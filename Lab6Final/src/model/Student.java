@@ -1,16 +1,10 @@
 package model;
 
-/*
- * Each student may be registered in up to 5 courses.
- */
 public class Student {
 	public String name;
 	public final int MAX_NUM_COURSES = 5;
 	// each element (e.g., courses[0], courses[1], ..., course[courses.length-1]) in the array stores
-	// the address of some CourseRecord object.
 	public CourseRecord[] courses; 
-	// 1. value of noc represents the number of CourseRecord objects stored in the courses array.
-	// 2. value of noc denotes where in the array 'courses' is the next CourseRecord object to be stored.
 	public int noc;
 
 	public Student(String name) {
@@ -33,10 +27,7 @@ public class Student {
 		// this.noc ++;
 	}
 	
-	/*
-	 * Given the title of course, return the marks of that course.
-	 * If the course does not exist, return - 1;
-	 */
+	
 	public int getMarks(String title) {
 		int marks = -1;
 		
@@ -50,10 +41,7 @@ public class Student {
 		return marks;
 	}
 	
-	/*
-	 * Given the title of course, set the marks of that course.
-	 * If the course does not exist, do nothing.
-	 */
+	
 	public void setMarks(String title, int marks) {
 		int index = this.indexOf(title);
 		if (index >= 0) {
@@ -63,9 +51,7 @@ public class Student {
 		}
 	}
 	
-	// Helper method reused by getMarks, and setMarks 
-	// Given the title of course, return the index of the corresponding courses object.
-	// If the title does not exists, return -1.
+	
 	int indexOf(String title) {
 		int index = -1;
 		
@@ -84,8 +70,6 @@ public class Student {
 		double gp = 0.0;
 		
 		for (int i = 0; i < this.noc; i++) {
-			// CourseRecord c = this.courses[i];
-			// String lg = c.getLetterGrade();
 			String lg = this.courses[i].getLetterGrade();
 			if (lg.equals("A+")) {
 				gp += 9;

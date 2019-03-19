@@ -58,21 +58,21 @@ public class StudentManagementSystem {
 		return marks;
 	}
 
-	public void setMarks(String string, String string2, int mark) {
+	public void setMarks(String name, String courseName, int mark) {
 		boolean found = false;
 		for (int i = 0; i < this.nos && !found; i++) {
-			if (this.student[i].getName().equals(string)) {
+			if (this.student[i].getName().equals(name)) {
 				found = true;
-				this.student[i].setMarks(string2, mark);
+				this.student[i].setMarks(courseName, mark);
 			}
 		}
 	}
 
-	public double getGPA(String string) {
-		double gpa = 0;
+	public double getGPA(String name) {
+		double gpa = 0.0;
 		boolean found = false;
 		for (int i = 0; i < this.nos && !found; i++) {
-			if (this.student[i].getName().equals(string)) {
+			if (this.student[i].getName().equals(name)) {
 				found = true;
 				gpa = this.student[i].getGPA();
 			}
@@ -80,10 +80,10 @@ public class StudentManagementSystem {
 		return gpa;
 	}
 
-	public void addCourse(String string, CourseRecord course) {
+	public void addCourse(String name, CourseRecord course) {
 		boolean found = false;
 		for (int i = 0; i < this.nos && !found; i++) {
-			if (this.students[i].getName().equals(string)) {
+			if (this.students[i].getName().equals(name)) {
 				found = true;
 				this.students[i].addCourse(course);
 			}

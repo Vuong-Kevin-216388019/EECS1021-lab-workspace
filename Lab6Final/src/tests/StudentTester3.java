@@ -19,7 +19,7 @@ public class StudentTester3 {
 		s1.addCourse("2030");
 		System.out.println(s1.getDescription());
 		
-		cr.setMarks(79); // as if: s1.courses[0].setMarks(60) because cr == s1.courses[0]
+		cr.setMarks(79); 
 		s1.courses[1].setMarks(60);
 		
 		System.out.println(s1.getDescription());

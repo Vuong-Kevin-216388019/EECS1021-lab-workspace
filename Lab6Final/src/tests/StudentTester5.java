@@ -20,7 +20,7 @@ public class StudentTester5 {
 		
 		Student s1 = new Student("SunHye");
 
-		// Link from student objects to course record objects
+		
 		s1.addCourse(cr1);
 		s1.addCourse(cr2);
 		s1.addCourse(cr3);
